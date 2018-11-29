@@ -17,3 +17,57 @@ class tutorSkillsCell: UITableViewCell
 {
     @IBOutlet var label: UILabel?
 }
+
+class filterClassesCell: UITableViewCell
+{
+    @IBOutlet var label: UILabel?
+    @IBOutlet var active: UISwitch?
+    
+    @IBAction func switched(_ sender: UISwitch)
+    {
+        if(sender.isOn)
+        {
+            print(#function)
+        }
+        else
+        {
+            print(#function + " off")
+        }
+    }
+}
+
+class filterSkillsCell: UITableViewCell
+{
+    @IBOutlet var label: UILabel?
+    @IBOutlet var active: UISwitch?
+    
+    @IBAction func switched(_ sender: UISwitch)
+    {
+        if(sender.isOn)
+        {
+            print(#function)
+        }
+        else
+        {
+            print(#function + " off")
+        }
+    }
+}
+
+class filterAvailabilityCell: UITableViewCell
+{
+    @IBOutlet var label: UILabel?
+    @IBOutlet var active: UISwitch?
+    
+    @IBAction func switched(_ sender: UISwitch)
+    {
+        if(sender.isOn)
+        {
+            print(#function)
+        }
+        else
+        {
+            print(#function + " off")
+        }
+    }
+}
