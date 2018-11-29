@@ -62,7 +62,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LXA-P2-eMK" kind="show" id="4LS-3K-Etc"/>
+                                    <segue destination="LXA-P2-eMK" kind="show" animates="NO" id="4LS-3K-Etc"/>
                                 </connections>
                             </button>
                         </subviews>
