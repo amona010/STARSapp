@@ -16,6 +16,7 @@
 		A96ABE8321B068DD00DE0ADB /* filterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96ABE8221B068DD00DE0ADB /* filterViewController.swift */; };
 		A9D24EC221AFA83B00B64269 /* tutorInfoCellsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */; };
 		A9D24EC421AFA89B00B64269 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D24EC321AFA89B00B64269 /* detailViewController.swift */; };
+		CC1278A321B14B4A0081A96F /* modelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1278A221B14B4A0081A96F /* modelData.swift */; };
 		CC4E5E4321AE453100A3561D /* IMG_1823.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4E5E4221AE453100A3561D /* IMG_1823.png */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		A96ABE8221B068DD00DE0ADB /* filterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterViewController.swift; sourceTree = "<group>"; };
 		A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutorInfoCellsFile.swift; sourceTree = "<group>"; };
 		A9D24EC321AFA89B00B64269 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		CC1278A221B14B4A0081A96F /* modelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelData.swift; sourceTree = "<group>"; };
 		CC4E5E4221AE453100A3561D /* IMG_1823.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1823.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				CC4E5E4221AE453100A3561D /* IMG_1823.png */,
+				CC1278A221B14B4A0081A96F /* modelData.swift */,
 				A925D9C421AB9DBA0076C797 /* AppDelegate.swift */,
 				A9D24EC321AFA89B00B64269 /* detailViewController.swift */,
 				A96ABE8221B068DD00DE0ADB /* filterViewController.swift */,
@@ -158,6 +161,7 @@
 				A96ABE8321B068DD00DE0ADB /* filterViewController.swift in Sources */,
 				A9499F3C21AC8C7300161BB1 /* tutorListViewController.swift in Sources */,
 				A9D24EC421AFA89B00B64269 /* detailViewController.swift in Sources */,
+				CC1278A321B14B4A0081A96F /* modelData.swift in Sources */,
 				A925D9C521AB9DBA0076C797 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

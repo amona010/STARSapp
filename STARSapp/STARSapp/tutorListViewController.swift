@@ -6,18 +6,16 @@
 //  Copyright © 2018 FIU. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-
-class tutorListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
-    @IBOutlet var tutorTable: UITableView!
+// UITableViewDelegate, UITableViewDataSource
+class tutorListViewController: UITableViewController{
+    
+    let tutorData = modelData.getSome
+    var useThisData = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tutorTable.delegate = self
-        self.tutorTable.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -26,13 +24,27 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        
+        return useThisData.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tutorCell", for: indexPath)
+        
+        
+        let tutorName = useThisData[indexPath.row][0].description
+        
+        cell.textLabel?.text = tutorName
+        
         return cell
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        useThisData = tutorData.setDataToReturn() as! [[String]]
+       tableView.reloadData()
+    }
+    
 }
+
