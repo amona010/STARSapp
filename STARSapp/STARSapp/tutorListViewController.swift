@@ -15,12 +15,18 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet var tutorTable: UITableView!
     
     var data = modelData.getSome
+    var useThisData = [[String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tutorTable.delegate = self
         self.tutorTable.dataSource = self
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        useThisData = data.setDataToReturn() as! [[String]]
+        tutorTable.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +40,7 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tutorCell", for: indexPath)
-        cell.textLabel?.text = data.setDataToReturn()
+        cell.textLabel?.text = useThisData[indexPath.row][0]
         return cell
     }
     

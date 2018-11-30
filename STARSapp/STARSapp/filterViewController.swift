@@ -61,7 +61,7 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath) as!filterClassesCell
             cell.label?.text = Array(data.checkClasses.keys)[indexPath.row]
-            cell.active?.isOn = true
+            cell.active?.isOn = Array(data.checkClasses.values)[indexPath.row]
             
             return cell
         }
@@ -69,7 +69,7 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "skillCell", for: indexPath) as!filterSkillsCell
             cell.label?.text = Array(data.checkSkills.keys)[indexPath.row]
-            cell.active?.isOn = true
+            cell.active?.isOn = Array(data.checkSkills.values)[indexPath.row]
             
             return cell
         }
@@ -77,7 +77,7 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "availabilityCell", for: indexPath) as! filterAvailabilityCell
             cell.label?.text = Array(data.checkAvailability.keys)[indexPath.row]
-            cell.active?.isOn = true
+            cell.active?.isOn = Array(data.checkAvailability.values)[indexPath.row]
             
             return cell
         }
