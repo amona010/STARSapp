@@ -22,16 +22,17 @@ class filterClassesCell: UITableViewCell
 {
     @IBOutlet var label: UILabel?
     @IBOutlet var active: UISwitch?
+    var data = modelData.getSome
     
     @IBAction func switched(_ sender: UISwitch)
     {
         if(sender.isOn)
         {
-            print(#function)
+            data.checkClasses.updateValue(true, forKey: (label?.text)!)
         }
         else
         {
-            print(#function + " off")
+            data.checkClasses.updateValue(false, forKey: (label?.text)!)
         }
     }
 }
@@ -40,16 +41,17 @@ class filterSkillsCell: UITableViewCell
 {
     @IBOutlet var label: UILabel?
     @IBOutlet var active: UISwitch?
+    var data = modelData.getSome
     
     @IBAction func switched(_ sender: UISwitch)
     {
         if(sender.isOn)
         {
-            print(#function)
+            data.checkSkills.updateValue(true, forKey: (label?.text)!)
         }
         else
         {
-            print(#function + " off")
+            data.checkSkills.updateValue(false, forKey: (label?.text)!)
         }
     }
 }
@@ -58,16 +60,17 @@ class filterAvailabilityCell: UITableViewCell
 {
     @IBOutlet var label: UILabel?
     @IBOutlet var active: UISwitch?
+    var data = modelData.getSome
     
     @IBAction func switched(_ sender: UISwitch)
     {
         if(sender.isOn)
         {
-            print(#function)
+            data.checkAvailability.updateValue(true, forKey: (label?.text)!)
         }
         else
         {
-            print(#function + " off")
+            data.checkAvailability.updateValue(false, forKey: (label?.text)!)
         }
     }
 }

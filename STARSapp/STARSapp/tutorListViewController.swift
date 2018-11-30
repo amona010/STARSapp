@@ -29,12 +29,12 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.data.count
+        return data.setDataToReturn().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tutorCell", for: indexPath)
-        cell.textLabel?.text = data.data[indexPath.row][0]
+        cell.textLabel?.text = data.setDataToReturn()
         return cell
     }
     

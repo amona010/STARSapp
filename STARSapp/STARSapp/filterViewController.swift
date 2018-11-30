@@ -14,8 +14,6 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet var skillTable: UITableView?
     @IBOutlet var availabiltyTable: UITableView?
     
-    var array1 = ["COP3342", "COP2244", "ENC2291"]
-    var array2 = ["Unity", "Swift", "Java"]
     var data = modelData.getSome
     
     override func viewDidLoad() {
@@ -33,6 +31,12 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        data.returnClass()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
