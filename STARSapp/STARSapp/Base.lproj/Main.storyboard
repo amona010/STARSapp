@@ -62,7 +62,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LXA-P2-eMK" kind="show" animates="NO" id="4LS-3K-Etc"/>
+                                    <segue destination="LXA-P2-eMK" kind="show" identifier="showTab" animates="NO" id="4LS-3K-Etc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -188,7 +188,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="G5u-XZ-28L" kind="show" id="4m5-Qm-5VZ"/>
+                                            <segue destination="G5u-XZ-28L" kind="show" identifier="showDetail" id="4m5-Qm-5VZ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -200,7 +200,7 @@
                     <navigationItem key="navigationItem" title="Tutors" id="b7q-kL-v5S">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="fL7-Bq-dHT">
                             <connections>
-                                <segue destination="Nzb-UT-U2H" kind="show" id="CqA-62-Nhc"/>
+                                <segue destination="Nzb-UT-U2H" kind="show" identifier="showFilter" id="CqA-62-Nhc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
