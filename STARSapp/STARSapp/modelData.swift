@@ -18,29 +18,27 @@ final class modelData
     static var getSome = modelData()
     
     let data : [[String]] =
-        [["Judith Ho","ENC2291, COP3337","JudithHo@fiu.edu","Calculus, Unity, Swift"],
+        [["Judith Ho","ENC2291, COP3337","JudithHo@fiu.edu","Calculus, Unity, Swift", "Freshman", "MonWed 3:00 - 5:00, Available"],
          
-         ["Davin Valencia","COP4005, COP3337","DavinValencia@fiu.edu","Calculus, Java, Swift"],
+         ["Davin Valencia","COP4005, COP3337","DavinValencia@fiu.edu","Calculus, Java, Swift", "Sophomore", "TuThurs 2:00 - 4:15, Unavailable"],
          
-         ["Caitlin Bowen","COP2244","kenyon@fiu.edu","Calculus, Unity, Swift"],
+         ["Caitlin Bowen","COP2244","kenyon@fiu.edu","Calculus, Unity, Swift", "Junior", "MonWed 2:00 - 4:15, Available"],
          
-         ["Carlos Massey","ENC2291","kenyon@fiu.edu","Calculus, Java, Swift"],
+         ["Carlos Massey","ENC2291","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "TuThurs 2:00 - 4:15, Unavailable"],
          
-         ["Gavin Mccullough","COP4005, ENC2291","kenyon@fiu.edu","Calculus, Java, Swift"],
+         ["Gavin Mccullough","COP4005, ENC2291","kenyon@fiu.edu","Calculus, Java, Swift", "Junior", "MonWed 2:00 - 4:15, Available"],
          
-         ["Erick Skinner","COP4005","kenyon@fiu.edu","Calculus, Java, Swift"],
+         ["Erick Skinner","COP4005","kenyon@fiu.edu","Calculus, Java, Swift", "Junior", "MonWed 2:00 - 4:15, Available"],
          
-         ["Pranav Martinez","COP5614, COP3337","kenyon@fiu.edu","Calculus, Java, Swift"],
+         ["Pranav Martinez","COP5614, COP3337","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "TuThurs 2:00 - 4:15, Unavailable"],
          
-         ["Nina Pham","COP5614","kenyon@fiu.edu","Calculus, Java, Swift"],
+         ["Nina Pham","COP5614","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "MonWed 2:00 - 4:15, Available"],
          
-         ["Todd Greer","COP3337","kenyon@fiu.edu","Calculus, Java, Swift"]]
+         ["Todd Greer","COP3337","kenyon@fiu.edu","Calculus, Java, Swift", "Sophomore", "TuThurs 2:00 - 4:15, Unavailable"]]
     
     var returnedData = [[String]]() //return the array
-//    var checkDefault = [0: "COP3342", 1:"COP2244", 2:"ENC2291", 3:"Unity",
-//                        4: "Swift", 5:"Java", 6:"Available"]
     var checkClasses = ["COP3337":true, "COP2244":true, "ENC2291":true, "COP4005":true, "COP5614":true]
-    var checkSkills = ["Unity":true, "Swift":true, "Java":true]
+    var checkSkills = ["Unity":true, "Swift":true, "Java":true, "Calculus":true]
     var checkAvailability = ["Available?":true]
     
     

@@ -58,8 +58,13 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
                     detailViewController.array2 = tutor[3].components(separatedBy: ", ")
                     detailViewController.name = tutor[0]
                     detailViewController.email = tutor[2]
+                    detailViewController.grade = tutor[4]
+                    detailViewController.schedule = tutor[5].components(separatedBy: ", ")[0]
                 }
-            break
+                break
+            case "showFilter"?:
+                print("Filter")
+                break
             
             default:
                 print("error")
