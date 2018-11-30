@@ -16,6 +16,7 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var array1 = ["COP3342", "COP2244", "ENC2291"]
     var array2 = ["Unity", "Swift", "Java"]
+    var data = modelData.getSome
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +39,15 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     {
         if(tableView == classTable)
         {
-            return array1.count
+            return data.checkClasses.count
         }
         else if(tableView == skillTable)
         {
-            return array2.count
+            return data.checkSkills.count
         }
         else
         {
-            return 1
+            return data.checkAvailability.count
         }
     }
     
@@ -55,7 +56,7 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if(tableView == classTable)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath) as!filterClassesCell
-            cell.label?.text = array1[indexPath.row]
+            cell.label?.text = Array(data.checkClasses.keys)[indexPath.row]
             cell.active?.isOn = true
             
             return cell
@@ -63,7 +64,7 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         else if(tableView == skillTable)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "skillCell", for: indexPath) as!filterSkillsCell
-            cell.label?.text = array2[indexPath.row]
+            cell.label?.text = Array(data.checkSkills.keys)[indexPath.row]
             cell.active?.isOn = true
             
             return cell
@@ -71,7 +72,7 @@ class filterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         else
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "availabilityCell", for: indexPath) as! filterAvailabilityCell
-            cell.label?.text = "Availabile?"
+            cell.label?.text = Array(data.checkAvailability.keys)[indexPath.row]
             cell.active?.isOn = true
             
             return cell
