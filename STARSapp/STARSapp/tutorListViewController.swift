@@ -44,4 +44,27 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        switch segue.identifier
+        {
+            case "showDetail"?:
+                if let row = tutorTable.indexPathForSelectedRow?.row
+                {
+                    let tutor = data.setDataToReturn()[row] as! [String]
+                    let detailViewController = segue.destination as! detailViewController
+                    //viewController passes model class information to detailView
+                    detailViewController.array1 = tutor[1].components(separatedBy: ", ")
+                    detailViewController.array2 = tutor[3].components(separatedBy: ", ")
+                    detailViewController.name = tutor[0]
+                    detailViewController.email = tutor[2]
+                }
+            break
+            
+            default:
+                print("error")
+            
+        }
+    }
+    
 }

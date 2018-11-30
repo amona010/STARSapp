@@ -10,11 +10,19 @@ import UIKit
 
 class detailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
-    var array1 = ["COP3342", "COP2244", "ENC2291"]
-    var array2 = ["Unity", "Swift", "Java"]
+    var array1 = [String]()
+    var array2 = [String]()
+    var name = ""
+    var grade = ""
+    var email = ""
+    var schedule = ""
     
     @IBOutlet var classTableView: UITableView?
     @IBOutlet var skillTableView: UITableView?
+    @IBOutlet var nameTextField: UITextField?
+    @IBOutlet var gradeTextField: UITextField?
+    @IBOutlet var emailTextField: UITextField?
+    @IBOutlet var scheduleTextField: UITextField?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +36,16 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        nameTextField?.text = name
+        gradeTextField?.text = grade
+        emailTextField?.text = email
+        scheduleTextField?.text = schedule
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
