@@ -73,7 +73,7 @@ final class modelData
             {
                 if tutor.description.contains(criteria.key)
                 {
-                    if(!criteria.value)
+                    if(criteria.value)
                     {
                         add = true
                     }
@@ -85,7 +85,7 @@ final class modelData
             {
                 if tutor.description.contains(criteria.key)
                 {
-                    if(!criteria.value)
+                    if(criteria.value)
                     {
                         add = true
                     }
