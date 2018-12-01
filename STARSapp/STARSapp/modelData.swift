@@ -39,7 +39,7 @@ final class modelData
     var returnedData = [[String]]() //return the array
     var checkClasses = ["COP3337":true, "COP2244":true, "ENC2291":true, "COP4005":true, "COP5614":true]
     var checkSkills = ["Unity":true, "Swift":true, "Java":true, "Calculus":true]
-    var checkAvailability = ["Available?":true]
+    var checkAvailability = ["Available?":false]
     
     
     func setDataToReturn() -> Array<Any>{
@@ -89,6 +89,23 @@ final class modelData
                     {
                         add = true
                     }
+                    break
+                }
+            }
+            
+            for criteria in checkAvailability
+            {
+                if(criteria.value)
+                {
+                    if(tutor[5].components(separatedBy: ", ")[1] == "Available")
+                    {
+                        add = true
+                    }
+                    else
+                    {
+                        add = false
+                    }
+                    
                     break
                 }
             }

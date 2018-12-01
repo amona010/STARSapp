@@ -16,6 +16,7 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var grade = ""
     var email = ""
     var schedule = ""
+    var availability = ""
     
     @IBOutlet var classTableView: UITableView?
     @IBOutlet var skillTableView: UITableView?
@@ -46,6 +47,32 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         emailTextField?.text = email
         scheduleTextField?.text = schedule
         
+    }
+    
+    @IBAction func makeAppointment()
+    {
+        var alert = UIAlertController()
+        
+        if(availability == "Available")
+        {
+            alert = UIAlertController(title: "Schedule appointment with " + name + "?", message: "This tutor is available!", preferredStyle: .alert)
+        }
+        else
+        {
+            alert = UIAlertController(title: "Schedule appointment with " + name + "?", message: "This tutor is not available!", preferredStyle: .alert)
+        }
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("Yes")
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("No")
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int

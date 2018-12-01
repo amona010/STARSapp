@@ -332,6 +332,9 @@
                                 <state key="normal" title="Make Appointment">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeAppointment" destination="G5u-XZ-28L" eventType="touchUpInside" id="i6S-F4-WwP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f56-Ai-cte">
                                 <rect key="frame" x="125" y="535" width="112" height="21"/>
