@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class detailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
+class detailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMessageComposeViewControllerDelegate
 {
     var array1 = [String]()
     var array2 = [String]()
@@ -17,6 +18,8 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var email = ""
     var schedule = ""
     var availability = ""
+    var phone = ""
+    var data = modelData.getSome
     
     @IBOutlet var classTableView: UITableView?
     @IBOutlet var skillTableView: UITableView?
@@ -64,7 +67,14 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
-            print("Yes")
+            if(MFMessageComposeViewController.canSendText())
+            {
+                let message = MFMessageComposeViewController()
+                message.body = "Hello " + self.name + ". My name is " + self.data.profileName + " and I would like to meet with you during your office hours: " + self.schedule
+                message.recipients = [self.phone]
+                message.messageComposeDelegate = self
+                self.present(message, animated: true, completion: nil)
+            }
         }))
         
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
@@ -103,5 +113,9 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
             
             return cell
         }
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

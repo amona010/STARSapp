@@ -61,6 +61,7 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
                     detailViewController.grade = tutor[4]
                     detailViewController.schedule = tutor[5].components(separatedBy: ", ")[0]
                     detailViewController.availability = tutor[5].components(separatedBy: ", ")[1]
+                    detailViewController.phone = tutor[6]
                 }
                 break
             case "showFilter"?:

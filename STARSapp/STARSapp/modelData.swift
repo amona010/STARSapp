@@ -14,27 +14,28 @@ final class modelData
     
     let userName = ["default1"]
     let password = ["pass"]
+    let profileName = "John Smith"
     
     static var getSome = modelData()
     
     let data : [[String]] =
-        [["Judith Ho","ENC2291, COP3337","JudithHo@fiu.edu","Calculus, Unity, Swift", "Freshman", "MonWed 3:00 - 5:00, Available"],
+        [["Judith Ho","ENC2291, COP3337","JudithHo@fiu.edu","Calculus, Unity, Swift", "Freshman", "MonWed 3:00 - 5:00, Available", "1111111111"],
          
-         ["Davin Valencia","COP4005, COP3337","DavinValencia@fiu.edu","Calculus, Java, Swift", "Sophomore", "TuThurs 2:00 - 4:15, Unavailable"],
+         ["Davin Valencia","COP4005, COP3337","DavinValencia@fiu.edu","Calculus, Java, Swift", "Sophomore", "TuThurs 2:00 - 4:15, Unavailable", "1111111111"],
          
-         ["Caitlin Bowen","COP2244","kenyon@fiu.edu","Calculus, Unity, Swift", "Junior", "MonWed 2:00 - 4:15, Available"],
+         ["Caitlin Bowen","COP2244","kenyon@fiu.edu","Calculus, Unity, Swift", "Junior", "MonWed 2:00 - 4:15, Available", "1111111111"],
          
-         ["Carlos Massey","ENC2291","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "TuThurs 2:00 - 4:15, Unavailable"],
+         ["Carlos Massey","ENC2291","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "TuThurs 2:00 - 4:15, Unavailable", "1111111111"],
          
-         ["Gavin Mccullough","COP4005, ENC2291","kenyon@fiu.edu","Calculus, Java, Swift", "Junior", "MonWed 2:00 - 4:15, Available"],
+         ["Gavin Mccullough","COP4005, ENC2291","kenyon@fiu.edu","Calculus, Java, Swift", "Junior", "MonWed 2:00 - 4:15, Available", "1111111111"],
          
-         ["Erick Skinner","COP4005","kenyon@fiu.edu","Calculus, Java, Swift", "Junior", "MonWed 2:00 - 4:15, Available"],
+         ["Erick Skinner","COP4005","kenyon@fiu.edu","Calculus, Java, Swift", "Junior", "MonWed 2:00 - 4:15, Available", "1111111111"],
          
-         ["Pranav Martinez","COP5614, COP3337","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "TuThurs 2:00 - 4:15, Unavailable"],
+         ["Pranav Martinez","COP5614, COP3337","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "TuThurs 2:00 - 4:15, Unavailable", "1111111111"],
          
-         ["Nina Pham","COP5614","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "MonWed 2:00 - 4:15, Available"],
+         ["Nina Pham","COP5614","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "MonWed 2:00 - 4:15, Available", "1111111111"],
          
-         ["Todd Greer","COP3337","kenyon@fiu.edu","Calculus, Java, Swift", "Sophomore", "TuThurs 2:00 - 4:15, Unavailable"]]
+         ["Todd Greer","COP3337","kenyon@fiu.edu","Calculus, Java, Swift", "Sophomore", "TuThurs 2:00 - 4:15, Unavailable", "1111111111"]]
     
     var returnedData = [[String]]() //return the array
     var checkClasses = ["COP3337":true, "COP2244":true, "ENC2291":true, "COP4005":true, "COP5614":true]
