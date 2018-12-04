@@ -9,8 +9,12 @@
 import Foundation
 import UIKit
 
-class profileViewController: UIViewController
+class profileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
+    @IBOutlet var imageView: UIImageView!
+    var profilePicture: UIImage!
+    var data = modelData.getSome
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,4 +24,40 @@ class profileViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func takePicture(_ sender: UIButton)
+    {
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera)
+        {
+            imagePicker.sourceType = .camera
+        }
+        else
+        {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        imagePicker.delegate = self
+        
+        // Place image picker on the screen
+        present(imagePicker, animated: true, completion: nil)
+        data.profilePicture = imageView.image
+    }
+    
+    // Function for putting the picture onto the UIImageView and adding to the contact info
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String: Any]) {
+        
+        // Get picked image from info dictionary
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        
+        imageView.image = image
+        
+        // Take image picker off the screen -
+        // you must call this dismiss method
+        dismiss(animated: true, completion: nil)
+    }
+
 }

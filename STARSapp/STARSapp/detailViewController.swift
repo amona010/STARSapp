@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import CoreData
 
 class detailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MFMessageComposeViewControllerDelegate
 {
@@ -20,6 +21,7 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var availability = ""
     var phone = ""
     var data = modelData.getSome
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     @IBOutlet var classTableView: UITableView?
     @IBOutlet var skillTableView: UITableView?
@@ -52,8 +54,28 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    func insertNewObject() {
+        let context = self.managedObjectContext
+        context?.perform {
+            let appt = Appointment(context: context!)
+            
+            appt.phoneNumber = Int32(self.phone)!
+            appt.schedule = self.schedule
+            appt.tutorName = self.name
+            
+            context?.insert(appt)
+        }
+        do {
+            try context?.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
+    }
+    
     @IBAction func makeAppointment()
     {
+        self.insertNewObject()
         var alert = UIAlertController()
         
         if(availability == "Available")

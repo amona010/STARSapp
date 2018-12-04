@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class modelData
 {
@@ -15,6 +16,7 @@ final class modelData
     let userName = ["default1"]
     let password = ["pass"]
     let profileName = "John Smith"
+    var profilePicture: UIImage? = nil
     
     static var getSome = modelData()
     
