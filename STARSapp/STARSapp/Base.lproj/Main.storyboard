@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="691" y="224"/>
         </scene>
-        <!--Item 2-->
+        <!--Appointments-->
         <scene sceneID="nzR-W2-coF">
             <objects>
-                <viewController id="4RK-2r-Wdu" sceneMemberID="viewController">
+                <viewController id="4RK-2r-Wdu" customClass="appointmentsTableViewController" customModule="STARSapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nT8-Jn-q3H"/>
                         <viewControllerLayoutGuide type="bottom" id="0Hg-eA-B1B"/>
@@ -143,7 +143,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="IQO-7o-MWU"/>
+                    <tabBarItem key="tabBarItem" title="Appointments" id="IQO-7o-MWU"/>
+                    <connections>
+                        <outlet property="appointmentTable" destination="Y4K-CH-LXf" id="BJ2-KT-Kzp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VAi-gB-j5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -534,7 +537,7 @@
         <!--Profile-->
         <scene sceneID="9dE-WV-ye2">
             <objects>
-                <viewController id="6wF-v9-G0g" sceneMemberID="viewController">
+                <viewController id="6wF-v9-G0g" customClass="profileViewController" customModule="STARSapp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="djr-sM-SUJ"/>
                         <viewControllerLayoutGuide type="bottom" id="2i1-jV-lgR"/>

@@ -14,6 +14,8 @@
 		A925D9CF21AB9DBA0076C797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A925D9CD21AB9DBA0076C797 /* LaunchScreen.storyboard */; };
 		A9499F3C21AC8C7300161BB1 /* tutorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9499F3B21AC8C7300161BB1 /* tutorListViewController.swift */; };
 		A94CE8DC21B1B4E700ADFCD3 /* modelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94CE8DB21B1B4E700ADFCD3 /* modelData.swift */; };
+		A959515221B6E1B400B549E7 /* appointmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959515121B6E1B400B549E7 /* appointmentsTableViewController.swift */; };
+		A959515421B6E30000B549E7 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A959515321B6E30000B549E7 /* profileViewController.swift */; };
 		A96ABE8321B068DD00DE0ADB /* filterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96ABE8221B068DD00DE0ADB /* filterViewController.swift */; };
 		A9D24EC221AFA83B00B64269 /* tutorInfoCellsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */; };
 		A9D24EC421AFA89B00B64269 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D24EC321AFA89B00B64269 /* detailViewController.swift */; };
@@ -30,6 +32,8 @@
 		A925D9D021AB9DBA0076C797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9499F3B21AC8C7300161BB1 /* tutorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutorListViewController.swift; sourceTree = "<group>"; };
 		A94CE8DB21B1B4E700ADFCD3 /* modelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = modelData.swift; sourceTree = "<group>"; };
+		A959515121B6E1B400B549E7 /* appointmentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = appointmentsTableViewController.swift; sourceTree = "<group>"; };
+		A959515321B6E30000B549E7 /* profileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		A96ABE8221B068DD00DE0ADB /* filterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterViewController.swift; sourceTree = "<group>"; };
 		A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutorInfoCellsFile.swift; sourceTree = "<group>"; };
 		A9D24EC321AFA89B00B64269 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
@@ -68,9 +72,11 @@
 			children = (
 				CC4E5E4221AE453100A3561D /* IMG_1823.png */,
 				A925D9C421AB9DBA0076C797 /* AppDelegate.swift */,
+				A959515121B6E1B400B549E7 /* appointmentsTableViewController.swift */,
 				A94CE8DB21B1B4E700ADFCD3 /* modelData.swift */,
 				A9D24EC321AFA89B00B64269 /* detailViewController.swift */,
 				A96ABE8221B068DD00DE0ADB /* filterViewController.swift */,
+				A959515321B6E30000B549E7 /* profileViewController.swift */,
 				A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */,
 				A9499F3B21AC8C7300161BB1 /* tutorListViewController.swift */,
 				A925D9C621AB9DBA0076C797 /* firstViewController.swift */,
@@ -157,6 +163,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9D24EC221AFA83B00B64269 /* tutorInfoCellsFile.swift in Sources */,
+				A959515221B6E1B400B549E7 /* appointmentsTableViewController.swift in Sources */,
+				A959515421B6E30000B549E7 /* profileViewController.swift in Sources */,
 				A925D9C721AB9DBA0076C797 /* firstViewController.swift in Sources */,
 				A96ABE8321B068DD00DE0ADB /* filterViewController.swift in Sources */,
 				A9499F3C21AC8C7300161BB1 /* tutorListViewController.swift in Sources */,
