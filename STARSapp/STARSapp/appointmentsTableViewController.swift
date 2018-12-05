@@ -16,17 +16,14 @@ class tutorAppointmentCell: UITableViewCell {
     @IBOutlet var phoneLabel: UILabel!
 }
 
-class appointmentsTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, NSFetchedResultsControllerDelegate {
-    
-    @IBOutlet var appointmentTable: UITableView!
+class appointmentsTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+
     var managedObjectContext: NSManagedObjectContext? = nil
     
     var data = modelData.getSome
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.appointmentTable.delegate = self
-        self.appointmentTable.dataSource = self
         let context = self.managedObjectContext
         context?.perform {
             let appt = Appointment(context: context!)
@@ -43,10 +40,6 @@ class appointmentsTableViewController: UIViewController, UITableViewDelegate, UI
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
         // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,12 +82,12 @@ class appointmentsTableViewController: UIViewController, UITableViewDelegate, UI
     
     var _fetchedResultsController: NSFetchedResultsController<Appointment>? = nil
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = fetchedResultsController.sections![section]
         return sectionInfo.numberOfObjects
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "appointmentCell", for: indexPath) as! tutorAppointmentCell
         let appt = fetchedResultsController.object(at: indexPath)
         
@@ -106,7 +99,7 @@ class appointmentsTableViewController: UIViewController, UITableViewDelegate, UI
     }
     
     // Function for allowing tableView edits, which is set to true, since appointments can get cancelled.
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
 }
