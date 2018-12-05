@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17G65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -73,11 +73,11 @@
             </objects>
             <point key="canvasLocation" x="-72" y="-550"/>
         </scene>
-        <!--Item-->
+        <!--Tutors-->
         <scene sceneID="BT9-rz-zt0">
             <objects>
                 <navigationController id="HET-cB-yMP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6FW-8I-1z1"/>
+                    <tabBarItem key="tabBarItem" title="Tutors" id="6FW-8I-1z1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gh2-rg-yLH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -484,10 +484,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-68-KQX">
-                                <rect key="frame" x="134" y="98" width="500" height="500"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOV-gy-TjU">
                                 <rect key="frame" x="328" y="683" width="112" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -509,21 +505,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-Zb-jX7">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LSY-Zb-jX7">
                                 <rect key="frame" x="126" y="712" width="508" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsL-eX-UGs">
-                                <rect key="frame" x="134" y="796" width="500" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MsL-eX-UGs">
+                                <rect key="frame" x="126" y="796" width="508" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qz-Sp-vy1">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qz-Sp-vy1">
                                 <rect key="frame" x="134" y="886" width="500" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -547,10 +543,20 @@
                                     <action selector="takePicture:" destination="6wF-v9-G0g" eventType="touchUpInside" id="QFe-Z6-Ddf"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-68-KQX">
+                                <rect key="frame" x="183" y="186" width="400" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="kuX-IJ-gfD"/>
+                    <connections>
+                        <outlet property="imageView" destination="Seu-68-KQX" id="yDc-Ld-vmD"/>
+                        <outlet property="profileEmail" destination="MsL-eX-UGs" id="EKd-Vc-PjM"/>
+                        <outlet property="profileName" destination="LSY-Zb-jX7" id="UU3-oF-yrS"/>
+                        <outlet property="profileNumber" destination="0qz-Sp-vy1" id="pJd-Je-hXo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teH-3s-0oS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -575,7 +581,7 @@
             </objects>
             <point key="canvasLocation" x="-73" y="224"/>
         </scene>
-        <!--Item-->
+        <!--Appointments-->
         <scene sceneID="Lk9-eS-Vio">
             <objects>
                 <tableViewController id="zEJ-CT-t0I" customClass="appointmentsTableViewController" customModule="STARSapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -598,7 +604,7 @@
                             <outlet property="delegate" destination="zEJ-CT-t0I" id="j9Q-IV-NnZ"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="1P6-oc-lJb"/>
+                    <tabBarItem key="tabBarItem" title="Appointments" id="1P6-oc-lJb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9LK-WG-mns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

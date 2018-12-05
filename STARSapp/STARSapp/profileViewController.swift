@@ -12,11 +12,17 @@ import UIKit
 class profileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var profileName: UITextField!
+    @IBOutlet var profileEmail: UITextField!
+    @IBOutlet var profileNumber: UITextField!
     var profilePicture: UIImage!
     var data = modelData.getSome
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileName.text = data.profileName
+        profileEmail.text = data.profileEmail
+        profileNumber.text = data.profileNumber
         // Do any additional setup after loading the view, typically from a nib.
     }
     

@@ -15,6 +15,8 @@ final class modelData
     let userName = ["default1"]
     let password = ["pass"]
     let profileName = "John Smith"
+    let profileNumber = "333-444-5555"
+    let profileEmail = "jSmith@fiu.edu"
     
     static var getSome = modelData()
     
@@ -35,7 +37,9 @@ final class modelData
          
          ["Nina Pham","COP5614","kenyon@fiu.edu","Calculus, Java, Swift", "Senior", "MonWed 2:00 - 4:15, Available", "1111111111"],
          
-         ["Todd Greer","COP3337","kenyon@fiu.edu","Calculus, Java, Swift", "Sophomore", "TuThurs 2:00 - 4:15, Unavailable", "1111111111"]]
+         ["Todd Greer","COP3337","kenyon@fiu.edu","Calculus, Java, Swift", "Sophomore", "TuThurs 2:00 - 4:15, Unavailable", "1111111111"],
+         
+         ["Stephanie Monterrey","COP3337, COP4005, COP5614","smont@fiu.edu","Calculus, Java, Swift", "Junior", "MonWed 3:00 - 5:30, Available", "7863012150"]]
     
     var returnedData = [[String]]() //return the array
     var checkClasses = ["COP3337":true, "COP2244":true, "ENC2291":true, "COP4005":true, "COP5614":true]
