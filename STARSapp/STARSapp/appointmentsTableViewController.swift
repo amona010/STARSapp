@@ -27,6 +27,21 @@ class appointmentsTableViewController: UIViewController, UITableViewDelegate, UI
         super.viewDidLoad()
         self.appointmentTable.delegate = self
         self.appointmentTable.dataSource = self
+        let context = self.managedObjectContext
+        context?.perform {
+            let appt = Appointment(context: context!)
+            
+            appt.tutorName = "Hello"
+            appt.phoneNumber = 111111
+            
+            context?.insert(appt)
+        }
+        do {
+            try context?.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
