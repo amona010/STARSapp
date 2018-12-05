@@ -42,7 +42,6 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // Place image picker on the screen
         present(imagePicker, animated: true, completion: nil)
-        data.profilePicture = imageView.image
     }
     
     // Function for putting the picture onto the UIImageView and adding to the contact info

@@ -19,6 +19,7 @@
 		A96ABE8321B068DD00DE0ADB /* filterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96ABE8221B068DD00DE0ADB /* filterViewController.swift */; };
 		A9D24EC221AFA83B00B64269 /* tutorInfoCellsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */; };
 		A9D24EC421AFA89B00B64269 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D24EC321AFA89B00B64269 /* detailViewController.swift */; };
+		B4F87BF521B7589300880C30 /* STARSapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4F87BF321B7589300880C30 /* STARSapp.xcdatamodeld */; };
 		CC4E5E4321AE453100A3561D /* IMG_1823.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4E5E4221AE453100A3561D /* IMG_1823.png */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		A96ABE8221B068DD00DE0ADB /* filterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterViewController.swift; sourceTree = "<group>"; };
 		A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutorInfoCellsFile.swift; sourceTree = "<group>"; };
 		A9D24EC321AFA89B00B64269 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
+		B4F87BF421B7589300880C30 /* STARSapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STARSapp.xcdatamodel; sourceTree = "<group>"; };
 		CC4E5E4221AE453100A3561D /* IMG_1823.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1823.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 		A925D9C321AB9DBA0076C797 /* STARSapp */ = {
 			isa = PBXGroup;
 			children = (
+				B4F87BF321B7589300880C30 /* STARSapp.xcdatamodeld */,
 				CC4E5E4221AE453100A3561D /* IMG_1823.png */,
 				A925D9C421AB9DBA0076C797 /* AppDelegate.swift */,
 				A959515121B6E1B400B549E7 /* appointmentsTableViewController.swift */,
@@ -171,6 +174,7 @@
 				A9D24EC421AFA89B00B64269 /* detailViewController.swift in Sources */,
 				A94CE8DC21B1B4E700ADFCD3 /* modelData.swift in Sources */,
 				A925D9C521AB9DBA0076C797 /* AppDelegate.swift in Sources */,
+				B4F87BF521B7589300880C30 /* STARSapp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +343,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B4F87BF321B7589300880C30 /* STARSapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B4F87BF421B7589300880C30 /* STARSapp.xcdatamodel */,
+			);
+			currentVersion = B4F87BF421B7589300880C30 /* STARSapp.xcdatamodel */;
+			name = STARSapp.xcdatamodeld;
+			path = ../../../../../Desktop/STARSapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A925D9B921AB9DBA0076C797 /* Project object */;
 }
