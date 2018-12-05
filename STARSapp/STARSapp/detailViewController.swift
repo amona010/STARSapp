@@ -14,6 +14,7 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 {
     var array1 = [String]()
     var array2 = [String]()
+    //Variables to fill text fields on 'viewwillappear'
     var name = ""
     var grade = ""
     var email = ""
@@ -73,32 +74,46 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    //Function which creates an alert to validate wether or not the user wants to make an appointment with
+    //the tutor of their choosing
     @IBAction func makeAppointment()
     {
         self.insertNewObject()
+        
+        //Alert to be displayed
         var alert = UIAlertController()
         
+        //If model data states that tutor is available
         if(availability == "Available")
         {
+            //Alert notifies user that this is the case
             alert = UIAlertController(title: "Schedule appointment with " + name + "?", message: "This tutor is available!", preferredStyle: .alert)
         }
         else
         {
+            //If not, the alert says otherwise
             alert = UIAlertController(title: "Schedule appointment with " + name + "?", message: "This tutor is not available!", preferredStyle: .alert)
         }
         
+        //Add action that schedules an appointment by text when the use says 'yes'
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
+            //Checks to see if the device is capable of using iMessage
             if(MFMessageComposeViewController.canSendText())
             {
+                //Creates a viewcontroller which handles a modal view that handles iMessage texts
                 let message = MFMessageComposeViewController()
+                //Create custom text
                 message.body = "Hello " + self.name + ". My name is " + self.data.profileName + " and I would like to meet with you during your office hours: " + self.schedule
+                //Set recipient to tutor phone number (given in model class)
                 message.recipients = [self.phone]
                 message.messageComposeDelegate = self
+                //Present iMessage
                 self.present(message, animated: true, completion: nil)
             }
         }))
         
+        //This action lets the user cancel
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
             print("No")
@@ -107,8 +122,10 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.present(alert, animated: true, completion: nil)
     }
     
+    //Handles tableView functionality for all tables in detail view controller
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
+        //Based on the ID of the tableview, correct value is returned
         if(tableView == classTableView)
         {
             return array1.count
@@ -119,8 +136,10 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    //Handles tableView functionality for all tables in detail view controller
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
+        //Based on the ID of the tableview, correct value is returned
         if(tableView == classTableView)
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "classCell", for: indexPath) as!tutorClassesCell

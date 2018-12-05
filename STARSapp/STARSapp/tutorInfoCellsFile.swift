@@ -5,6 +5,7 @@
 //  Created by Alexander Monaco on 11/28/18.
 //  Copyright © 2018 FIU. All rights reserved.
 //
+//  This file contains the various classes which represent the different tableview cells in the application
 
 import UIKit
 

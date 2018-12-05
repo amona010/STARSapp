@@ -17,6 +17,7 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
     var data = modelData.getSome
     var useThisData = [[String]]()
     
+    //Set delegate and datasource to viewController
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tutorTable.delegate = self
@@ -44,6 +45,7 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
+    //Function which prepares the data in the model class to be used in the detail view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         switch segue.identifier
