@@ -1,9 +1,9 @@
-//
-//  modelData.swift
-//  finalproject
-//
-//  Created by Fawaz on 11/23/18.
-//  Copyright © 2018 Fawaz Ahmed. All rights reserved.
+//  PROGRAMMERS: Alexander Monaco, Fawaz Ahmed, Dominique Felix
+//  PANTHERID: 5673317, 4199402,
+//  CLASS: COP 4655 TR 5:00
+//  INSTRUCTOR:  Steve Luis PG6
+//  ASSIGNMENT: Final project: STARS Organization Tutor scheduling application
+//  DUE: Sunday 12/06/18
 //
 
 import Foundation

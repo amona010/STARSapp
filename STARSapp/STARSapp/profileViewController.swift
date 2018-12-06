@@ -1,9 +1,9 @@
-// PROGRAMMER:  Dominique Felix
-// PANTHERID:   4199402
-// CLASS:       COP 4655-01
-// INSTRUCTOR:  Steve Luis ECS 282
-// ASSIGNMENT:  Group Project (STARS App)
-// DUE:         Tuesday 12/6/18
+//  PROGRAMMERS: Alexander Monaco, Fawaz Ahmed, Dominique Felix
+//  PANTHERID: 5673317, 4199402,
+//  CLASS: COP 4655 TR 5:00
+//  INSTRUCTOR:  Steve Luis PG6
+//  ASSIGNMENT: Final project: STARS Organization Tutor scheduling application
+//  DUE: Sunday 12/06/18
 //
 
 import Foundation

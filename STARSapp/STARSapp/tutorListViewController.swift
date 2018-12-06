@@ -1,9 +1,9 @@
-//
-//  tutorListViewController.swift
-//  STARSapp
-//
-//  Created by Alexander Monaco on 11/26/18.
-//  Copyright © 2018 FIU. All rights reserved.
+//  PROGRAMMERS: Alexander Monaco, Fawaz Ahmed, Dominique Felix
+//  PANTHERID: 5673317, 4199402,
+//  CLASS: COP 4655 TR 5:00
+//  INSTRUCTOR:  Steve Luis PG6
+//  ASSIGNMENT: Final project: STARS Organization Tutor scheduling application
+//  DUE: Sunday 12/06/18
 //
 
 import Foundation

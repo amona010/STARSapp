@@ -123,7 +123,7 @@
 				TargetAttributes = {
 					A925D9C021AB9DBA0076C797 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 72V5PUL7T5;
+						DevelopmentTeam = 93WYGZ7V5C;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -299,10 +299,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 72V5PUL7T5;
+				DEVELOPMENT_TEAM = 93WYGZ7V5C;
 				INFOPLIST_FILE = STARSapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dfeli014.STARSapp;
+				PRODUCT_BUNDLE_IDENTIFIER = amona010.STARSapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -312,10 +312,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 72V5PUL7T5;
+				DEVELOPMENT_TEAM = 93WYGZ7V5C;
 				INFOPLIST_FILE = STARSapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dfeli014.STARSapp;
+				PRODUCT_BUNDLE_IDENTIFIER = amona010.STARSapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
