@@ -17,6 +17,8 @@ class firstViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        userName.delegate = self
+        passWord.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -50,9 +52,23 @@ class firstViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool { 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField)
+    {
+        UIView.animate(withDuration: 0.1) {
+            self.view.frame.origin.y -= 150
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField)
+    {
+        UIView.animate(withDuration: 0.1) {
+            self.view.frame.origin.y += 150
+        }
     }
     
     
