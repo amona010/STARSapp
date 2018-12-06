@@ -56,6 +56,7 @@ class firstViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    // When Login button is pressed, the persistant container's context is given to the appropriate view controllers for further use. 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showTab" {
             let tab = segue.destination as! UITabBarController

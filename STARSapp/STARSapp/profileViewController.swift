@@ -11,6 +11,8 @@ import UIKit
 
 class profileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
 {
+    
+    // Variables for profile information and imageView which is a placeholder for the photo
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var profileName: UITextField!
     @IBOutlet var profileEmail: UITextField!
@@ -30,6 +32,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Dispose of any resources that can be recreated.
     }
     
+    // Function for when the takePhoto button is pressed
     @IBAction func takePicture(_ sender: UIButton)
     {
         let imagePicker = UIImagePickerController()
@@ -56,7 +59,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Get picked image from info dictionary
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        
+        // imageView gets image taken
         imageView.image = image
         
         // Take image picker off the screen -

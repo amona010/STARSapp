@@ -14,15 +14,12 @@ import CoreData
 class tutorAppointmentCell: UITableViewCell {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var apptLabel: UILabel!
-    @IBOutlet var phoneLabel: UILabel!
 }
 
 class appointmentsTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
     // Context where Appointment objects are saved
     var managedObjectContext: NSManagedObjectContext? = nil
-    
-    var data = modelData.getSome
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +71,6 @@ class appointmentsTableViewController: UITableViewController, NSFetchedResultsCo
     // Return numbers of items in the context for the tableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = fetchedResultsController.sections![section]
-        
         return sectionInfo.numberOfObjects
     }
     
@@ -85,12 +81,11 @@ class appointmentsTableViewController: UITableViewController, NSFetchedResultsCo
         
         cell.nameLabel.text = appt.tutorName
         cell.apptLabel.text = appt.schedule
-        cell.phoneLabel.text = String(appt.phoneNumber)
         
         return cell
     }
     
-    // Function for allowing tableView edits, which is set to true, since appointments can get cancelled.
+    // Function for allowing tableView individual cell edits, which is set to true, since there is a button that will activate that function
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
@@ -119,7 +114,6 @@ class appointmentsTableViewController: UITableViewController, NSFetchedResultsCo
                             forRowAt indexPath: IndexPath) {
         // If the table view is asking to commit a delete command...
         if editingStyle == .delete {
-            let appt: NSManagedObject = fetchedResultsController.object(at: indexPath)
             
             
             let title = "Delete Appointment?"
@@ -134,19 +128,22 @@ class appointmentsTableViewController: UITableViewController, NSFetchedResultsCo
             
             let deleteAction = UIAlertAction(title: "Delete", style: .destructive,
                                              handler: { (action) -> Void in
-                                                // Remove the item from the context
-                                                self.managedObjectContext?.perform {
-                                                    self.managedObjectContext?.delete(appt)
+                                                if editingStyle == .delete {
+                                                    
+                                                    // Creates a context reference and deletes the object at indexPath
+                                                    let context = self.fetchedResultsController.managedObjectContext
+                                                    context.delete(self.fetchedResultsController.object(at: indexPath))
+                                                    
+                                                    do {
+                                                        try context.save()
+                                                    } catch {
+                                                        // Replace this implementation with code to handle the error appropriately.
+                                                        // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                                                        let nserror = error as NSError
+                                                        fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+                                                    }
                                                 }
-                                                do {
-                                                    try self.managedObjectContext?.save()
-                                                } catch {
-                                                    let nserror = error as NSError
-                                                    fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-                                                }
-                                                                                                
-                                                // Also remove that row from the table view with an animation
-                                                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+
             })
             ac.addAction(deleteAction)
             
@@ -154,4 +151,27 @@ class appointmentsTableViewController: UITableViewController, NSFetchedResultsCo
             present(ac, animated: true, completion: nil)
         }
     }
+    
+    // Function for telling fetchResultsController changes are going to happen.
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    // Function for telling fetchResultsController changes have happened already.
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
+    }
+    
+    // Function for handling the tableView manipulation with the fetchResultsController
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .fade)
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .fade)
+        default:
+            break;
+        }
+    }
+
 }

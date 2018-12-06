@@ -64,7 +64,6 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         context?.perform {
             let appt = Appointment(context: context!)
             
-            //appt.phoneNumber = Int32(self.phone)!
             appt.schedule = self.schedule
             appt.tutorName = self.name
             
@@ -82,7 +81,6 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     //the tutor of their choosing
     @IBAction func makeAppointment()
     {
-        self.insertNewObject()
         
         //Alert to be displayed
         var alert = UIAlertController()
@@ -102,6 +100,10 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //Add action that schedules an appointment by text when the use says 'yes'
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
+            
+            //Saves object to the applications's context 
+            self.insertNewObject()
+            
             //Checks to see if the device is capable of using iMessage
             if(MFMessageComposeViewController.canSendText())
             {

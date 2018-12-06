@@ -16,6 +16,8 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var data = modelData.getSome
     var useThisData = [[String]]()
+    
+    // Context where Appointment objects are saved
     var managedObjectContext: NSManagedObjectContext? = nil
     
     //Set delegate and datasource to viewController
