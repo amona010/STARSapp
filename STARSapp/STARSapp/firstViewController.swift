@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class firstViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var userName: UITextField!
     @IBOutlet var passWord: UITextField!
+    
+    // Context where Appointment objects are saved, not used in this class, but reference of context sent through segue to other controllers.
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     let data = modelData.getSome
     
@@ -50,6 +54,18 @@ class firstViewController: UIViewController, UITextFieldDelegate {
         }
         
         return false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTab" {
+            let tab = segue.destination as! UITabBarController
+            let vc1 = tab.viewControllers?[2] as! appointmentsTableViewController
+            
+            vc1.managedObjectContext = self.managedObjectContext
+            
+            let vc2 = tab.viewControllers?[0].childViewControllers[0] as! tutorListViewController
+            vc2.managedObjectContext = self.managedObjectContext
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

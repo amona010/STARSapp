@@ -1,29 +1,24 @@
-// PROGRAMMER:  Dominique Felix
-// PANTHERID:   4199402
-// CLASS:       COP 4655-01
-// INSTRUCTOR:  Steve Luis ECS 282
-// ASSIGNMENT:  Group Project (STARS App)
-// DUE:         Tuesday 12/6/18
+//
+//  AppDelegate.swift
+//  STARSapp
+//
+//  Created by Alexander Monaco on 11/25/18.
+//  Copyright © 2018 FIU. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UITableViewDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        // Way to make persistant container's view context connected to context for view controllers
-        let vc = self.window?.rootViewController as! firstViewController
-        vc.managedObjectContext = self.persistentContainer.viewContext
         return true
     }
-    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

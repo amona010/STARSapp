@@ -38,7 +38,7 @@
 		A96ABE8221B068DD00DE0ADB /* filterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterViewController.swift; sourceTree = "<group>"; };
 		A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutorInfoCellsFile.swift; sourceTree = "<group>"; };
 		A9D24EC321AFA89B00B64269 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
-		A9D5CD9621B75C9F00F0907F /* STARSapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STARSapp.xcdatamodel; sourceTree = "<group>"; };
+		A9D5CD9621B75C9F00F0907F /* STARSapp.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = STARSapp.xcdatamodel; sourceTree = "<group>"; };
 		CC4E5E4221AE453100A3561D /* IMG_1823.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1823.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 

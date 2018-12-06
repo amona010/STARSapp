@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import CoreData
 
 class tutorListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
@@ -16,6 +16,7 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
     
     var data = modelData.getSome
     var useThisData = [[String]]()
+    var managedObjectContext: NSManagedObjectContext? = nil
     
     //Set delegate and datasource to viewController
     override func viewDidLoad() {
@@ -64,6 +65,9 @@ class tutorListViewController: UIViewController, UITableViewDelegate, UITableVie
                     detailViewController.schedule = tutor[5].components(separatedBy: ", ")[0]
                     detailViewController.availability = tutor[5].components(separatedBy: ", ")[1]
                     detailViewController.phone = tutor[6]
+                    
+                    //sending context to detailViewController for further processing
+                    detailViewController.managedObjectContext = self.managedObjectContext
                 }
                 break
             case "showFilter"?:

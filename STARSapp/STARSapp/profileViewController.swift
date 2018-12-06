@@ -1,9 +1,9 @@
-//
-//  profileViewController.swift
-//  STARSapp
-//
-//  Created by Alexander Monaco on 12/4/18.
-//  Copyright © 2018 FIU. All rights reserved.
+// PROGRAMMER:  Dominique Felix
+// PANTHERID:   4199402
+// CLASS:       COP 4655-01
+// INSTRUCTOR:  Steve Luis ECS 282
+// ASSIGNMENT:  Group Project (STARS App)
+// DUE:         Tuesday 12/6/18
 //
 
 import Foundation
@@ -15,7 +15,6 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet var profileName: UITextField!
     @IBOutlet var profileEmail: UITextField!
     @IBOutlet var profileNumber: UITextField!
-    var profilePicture: UIImage!
     var data = modelData.getSome
     
     override func viewDidLoad() {

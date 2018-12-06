@@ -14,6 +14,7 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
 {
     var array1 = [String]()
     var array2 = [String]()
+    
     //Variables to fill text fields on 'viewwillappear'
     var name = ""
     var grade = ""
@@ -22,6 +23,8 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var availability = ""
     var phone = ""
     var data = modelData.getSome
+    
+    // Context where Appointment objects are saved
     var managedObjectContext: NSManagedObjectContext? = nil
     
     @IBOutlet var classTableView: UITableView?
@@ -55,12 +58,13 @@ class detailViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
+    // Function for adding objects into context
     func insertNewObject() {
         let context = self.managedObjectContext
         context?.perform {
             let appt = Appointment(context: context!)
             
-            appt.phoneNumber = Int32(self.phone)!
+            //appt.phoneNumber = Int32(self.phone)!
             appt.schedule = self.schedule
             appt.tutorName = self.name
             
