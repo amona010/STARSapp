@@ -26,7 +26,6 @@ class appointmentsTableViewController: UITableViewController, NSFetchedResultsCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.reloadData()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -75,6 +74,7 @@ class appointmentsTableViewController: UITableViewController, NSFetchedResultsCo
     // Return numbers of items in the context for the tableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = fetchedResultsController.sections![section]
+        
         return sectionInfo.numberOfObjects
     }
     
