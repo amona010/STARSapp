@@ -19,7 +19,7 @@
 		A96ABE8321B068DD00DE0ADB /* filterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96ABE8221B068DD00DE0ADB /* filterViewController.swift */; };
 		A9D24EC221AFA83B00B64269 /* tutorInfoCellsFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */; };
 		A9D24EC421AFA89B00B64269 /* detailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D24EC321AFA89B00B64269 /* detailViewController.swift */; };
-		A9D5CD9721B75C9F00F0907F /* STARSapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9D5CD9521B75C9F00F0907F /* STARSapp.xcdatamodeld */; };
+		A9EB37A921B9ECEC00D4C8BC /* STARSapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9EB37A721B9ECEC00D4C8BC /* STARSapp.xcdatamodeld */; };
 		CC4E5E4321AE453100A3561D /* IMG_1823.png in Resources */ = {isa = PBXBuildFile; fileRef = CC4E5E4221AE453100A3561D /* IMG_1823.png */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		A96ABE8221B068DD00DE0ADB /* filterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = filterViewController.swift; sourceTree = "<group>"; };
 		A9D24EC121AFA83B00B64269 /* tutorInfoCellsFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tutorInfoCellsFile.swift; sourceTree = "<group>"; };
 		A9D24EC321AFA89B00B64269 /* detailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailViewController.swift; sourceTree = "<group>"; };
-		A9D5CD9621B75C9F00F0907F /* STARSapp.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = STARSapp.xcdatamodel; sourceTree = "<group>"; };
+		A9EB37A821B9ECEC00D4C8BC /* STARSapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = STARSapp.xcdatamodel; sourceTree = "<group>"; };
 		CC4E5E4221AE453100A3561D /* IMG_1823.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1823.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,7 +72,6 @@
 		A925D9C321AB9DBA0076C797 /* STARSapp */ = {
 			isa = PBXGroup;
 			children = (
-				A9D5CD9521B75C9F00F0907F /* STARSapp.xcdatamodeld */,
 				CC4E5E4221AE453100A3561D /* IMG_1823.png */,
 				A925D9C421AB9DBA0076C797 /* AppDelegate.swift */,
 				A959515121B6E1B400B549E7 /* appointmentsTableViewController.swift */,
@@ -87,6 +86,7 @@
 				A925D9CB21AB9DBA0076C797 /* Assets.xcassets */,
 				A925D9CD21AB9DBA0076C797 /* LaunchScreen.storyboard */,
 				A925D9D021AB9DBA0076C797 /* Info.plist */,
+				A9EB37A721B9ECEC00D4C8BC /* STARSapp.xcdatamodeld */,
 			);
 			path = STARSapp;
 			sourceTree = "<group>";
@@ -174,7 +174,7 @@
 				A9D24EC421AFA89B00B64269 /* detailViewController.swift in Sources */,
 				A94CE8DC21B1B4E700ADFCD3 /* modelData.swift in Sources */,
 				A925D9C521AB9DBA0076C797 /* AppDelegate.swift in Sources */,
-				A9D5CD9721B75C9F00F0907F /* STARSapp.xcdatamodeld in Sources */,
+				A9EB37A921B9ECEC00D4C8BC /* STARSapp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,14 +345,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A9D5CD9521B75C9F00F0907F /* STARSapp.xcdatamodeld */ = {
+		A9EB37A721B9ECEC00D4C8BC /* STARSapp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A9D5CD9621B75C9F00F0907F /* STARSapp.xcdatamodel */,
+				A9EB37A821B9ECEC00D4C8BC /* STARSapp.xcdatamodel */,
 			);
-			currentVersion = A9D5CD9621B75C9F00F0907F /* STARSapp.xcdatamodel */;
-			name = STARSapp.xcdatamodeld;
-			path = ../../STARSapp.xcdatamodeld;
+			currentVersion = A9EB37A821B9ECEC00D4C8BC /* STARSapp.xcdatamodel */;
+			path = STARSapp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
